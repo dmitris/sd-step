@@ -185,13 +185,13 @@ func main() {
 	app.Version = VERSION
 
 	app.Flags = []cli.Flag{
-		cli.StringFlag{
+		&cli.StringFlag{
 			Name:        "pkg-version",
 			Usage:       "Package version which also accepts semver expression",
 			Value:       "",
 			Destination: &pkgVerExp,
 		},
-		cli.StringFlag{
+		&cli.StringFlag{
 			Name:        "hab-channel",
 			Usage:       "Install from the specified release channel",
 			Value:       "stable",
